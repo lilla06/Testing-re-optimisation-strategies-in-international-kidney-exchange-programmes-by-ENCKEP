@@ -1,0 +1,37 @@
+{
+"general":{
+	"matching_interval": 90,
+	"collaboration_approach": "borderless",
+	"max_cycle_length": 3,
+	"max_chain_length": 3,
+	"internal_recourse": "",
+	"continue_chain": "true",
+	"optimization_rounds": [["UK"], ["ES"], ["NL"], ["general"]],
+	"fix_cycles": "",
+	"optimization_runs": 1
+},
+"UK": {
+	"max_cycle_length": 3,
+	"max_chain_length": 3,
+	"internal_recourse": "true",
+	"continue_chain": "true",
+	"optimization_runs": 1,
+	"fix_cycles": ""
+	},
+"NL": {
+	"max_cycle_length": 4,
+	"max_chain_length": 4,
+	"internal_recourse": "",
+	"continue_chain": "True",
+	"optimization_runs": 5,
+	"fix_cycles": ""
+	},
+"ES": {
+	"max_cycle_length": 3,
+	"max_chain_length": 4,
+	"internal_recourse": "true",
+	"continue_chain": "True",
+	"optimization_runs": 1,
+	"fix_cycles": "true"
+	}
+}

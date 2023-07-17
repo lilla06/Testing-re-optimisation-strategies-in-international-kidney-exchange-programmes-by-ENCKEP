@@ -1,0 +1,13 @@
+{
+"general":{
+	"matching_interval": 90,
+	"collaboration_approach": "none",
+	"max_cycle_length": 3,
+	"max_chain_length": 3,
+	"internal_recourse": "true",
+	"continue_chain": "true",
+	"optimization_rounds": [],
+	"fix_cycles": "",
+	"optimization_runs": 1
+  }
+}
