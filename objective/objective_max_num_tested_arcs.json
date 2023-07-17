@@ -1,0 +1,28 @@
+{
+	"general": {
+		"lexicographic_order": [
+			"max_num_transplants",
+            "max_num_tested_arcs",
+			"max_num_cycles",
+			"prior_highly_sensitised_recipients"
+		],
+		"cycle_level_weighted": [],
+		"arc_level_weighted": [],
+		"criterion_parameters": {
+			"max_num_transplants": {
+				"score": 1
+			},
+            "max_num_tested_arcs": {
+				"score": 1
+			},
+			"max_num_cycles": {
+				"count_chains": "true",
+				"score": 1
+			},
+			"prior_highly_sensitised_recipients": {
+				"function": "reciprocal",
+				"score": 30
+			}
+		}
+	}
+}

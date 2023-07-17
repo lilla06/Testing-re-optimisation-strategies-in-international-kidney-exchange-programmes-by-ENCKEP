@@ -1,0 +1,107 @@
+{
+	"general": {
+		"lexicographic_order": [
+			"max_num_transplants",
+            "max_num_arcs_in_pools",
+			"max_num_cycles",
+			"prior_highly_sensitised_recipients"
+		],
+		"cycle_level_weighted": [],
+		"arc_level_weighted": [],
+		"criterion_parameters": {
+			"max_num_transplants": {
+				"score": 1
+			},
+            "max_num_arcs_in_pools": {
+              "score": 1
+            },
+			"max_num_cycles": {
+				"count_chains": "true",
+				"score": 1
+			},
+			"prior_highly_sensitised_recipients": {
+				"function": "reciprocal",
+				"score": 30
+			}
+		}
+	},
+	"UK": {
+		"lexicographic_order": [
+			"max_num_effective_two_cycles",
+			"max_num_arcs_in_pools",
+			"max_num_transplants",
+			"max_num_cycles",
+			"max_num_back_arcs"
+		],
+		"cycle_level_weighted": [],
+		"arc_level_weighted": [
+			"prior_recipient_waiting_time_in_kep",
+			"prior_highly_sensitised_recipients",
+			"min_donor_donor_age_difference"],
+		"criterion_parameters": {
+			"max_num_effective_two_cycles": {
+				"score": 1
+			},
+			"max_num_transplants": {
+				"score": 1
+			},
+			"max_num_arcs_in_pools": {
+				"score": 1
+			},
+			"max_num_cycles": {
+				"count_chains": "true",
+				"score": 1
+			},
+			"max_num_back_arcs": {
+				"score": 1
+			},
+			"prior_recipient_waiting_time_in_kep": {
+				"threshold": 3,
+				"function": "linear",
+				"score": 50
+			},
+			"prior_highly_sensitised_recipients": {
+				"function": "reciprocal",
+				"score": 30
+			},
+			"min_donor_donor_age_difference": {
+				"function": "threshold",
+				"score": 3,
+				"threshold": 20
+			}
+		}
+	},
+"ES":{
+	"lexicographic_order": ["max_num_transplants",
+				"max_num_arcs_in_pools",
+				"max_num_cycles",
+				"max_num_back_arcs",
+				"prior_highly_sensitised_recipients"],
+	"cycle_level_weighted": [],
+	"arc_level_weighted": ["min_donor_patient_age_difference", "prior_low_matching_prob_recipients",
+			       "prior_recipient_waiting_time_in_kep", "prior_blood_group"],
+	"criterion_parameters": {
+		"max_num_transplants": {"score":1},
+		"max_num_arcs_in_pools": {"score":1},
+		"max_num_cycles": {"count_chains":"true", "score":1},
+		"max_num_back_arcs": {"score":1},
+		"prior_highly_sensitised_recipients": {"function":"reciprocal", "score":5},
+		"min_donor_patient_age_difference": {"function":"threshold", "score":15, "threshold":10},
+		"prior_low_matching_prob_recipients": {"function":"linear", "score":30},
+		"prior_recipient_waiting_time_in_kep": {"function":"threshold", "score":30, "threshold":12},
+		"prior_blood_group": {"function":"basic", "score":1, "identical":30}}},
+"NL":{
+	"lexicographic_order": ["max_num_transplants",
+				"max_num_arcs_in_pools",
+				"prior_blood_group",
+				"prior_low_matching_prob_recipients",
+				"max_num_short_cycles"],
+	"cycle_level_weighted": [],
+	"arc_level_weighted": [],
+	"criterion_parameters": {
+		"max_num_transplants": {"score":1},
+		"max_num_arcs_in_pools": {"score": 1},
+		"prior_blood_group": {"function":"basic", "score":1, "identical":5},
+		"prior_low_matching_prob_recipients": {"function":"reciprocal", "score":5},
+		"max_num_short_cycles": {"count_chains":"true", "score":1}}}
+}
