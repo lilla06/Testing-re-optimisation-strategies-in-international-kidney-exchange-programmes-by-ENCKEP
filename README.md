@@ -2,11 +2,11 @@
 Testing re-optimisation strategies in international kidney exchange programmes by the ENCKEP simulator
 
 ## Config files
-We used to modified config files to generate the datasets. These config files have modified PRA value based on real historical datasets.
+We used the modified config files to generate the datasets. These config files have modified PRA values based on real historical datasets.
 The config_7.5.json was used for the tests on one pool (the 7.5 refers to the size of the pool), while the config_ES_modified.json, config_NL_modified.json and the config_UK_modified.json files were used for the multiple pool simulations to generate tha data for Spain, the Netherlands and fot the United Kingdom.
 
 ## Objective files
-We used the general_objective.json file for most of the one pool simulations. The two exceptions are the cases when we tested two new optimisation critera: to maximise the number of tested arcs we used the objective_max_num_tested_arcs.json file, and to maximise the number of inner arcs we used the objective_max_num_arcs_in_pools.json file.
+We used the general_objective.json file for most of the one pool simulations. The two exceptions are the cases when we tested the two new optimisation critera: to maximise the number of tested arcs we used the objective_max_num_tested_arcs.json file, and to maximise the number of inner arcs we used the objective_max_num_arcs_in_pools.json file.
 For the multiple pool simulations we used the objective_UK_ES_NL.json in every case.
 
 ## Policy files
